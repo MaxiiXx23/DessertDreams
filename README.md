@@ -22,7 +22,9 @@
 
 ### Design
 
-<img src="https://img.shields.io/badge/Figma-f87171?style=for-the-badge&logo=figma&logoColor=white" alt="Design Figma" style="cursor:pointer" align="center" />
+<a href="https://www.figma.com/proto/KAkVEoyCgtZcRHMm3yQUs3/Dessert-Dreams?type=design&node-id=1-2&t=KfL9czMdddPA7zc6-1&scaling=scale-down&page-id=0%3A1" aria-label="Link Design Figma" target="_blank">
+<img src="https://img.shields.io/badge/Figma-f87171?style=for-the-badge&logo=figma&logoColor=white" alt="Design Figma" align="center" />
+</a>
 
 ### Passo-a-passo para rodar a aplicação:
 
