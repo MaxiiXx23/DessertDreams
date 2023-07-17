@@ -6,6 +6,7 @@ import { Home } from '@/pages/Home'
 import { Order } from '@/pages/Order'
 import { AboutMe } from '@/pages/AboutMe'
 import { Contact } from '@/pages/Contact'
+import { PageNotFound } from '@/pages/PageNotFound'
 
 export function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export function AppRoutes() {
         <Route path="/sobre-mim" element={<AboutMe />} />
         <Route path="/contato" element={<Contact />} />
       </Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
 }
