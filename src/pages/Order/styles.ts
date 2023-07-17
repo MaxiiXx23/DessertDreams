@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { NavLink } from 'react-router-dom'
-
 import backgroundImage from '@/assets/brigadeiro.svg'
 
 export const ContainerMain = styled.main`
@@ -106,22 +104,4 @@ export const WrapperIcons = styled.div`
   justify-content: center;
 
   gap: 1.5rem;
-`
-export const Icon = styled(NavLink)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0.25rem;
-
-  text-decoration: none;
-  color: ${({ theme }) => theme.white};
-
-  background-color: ${({ theme }) => theme.primary};
-
-  border-radius: 16px;
-
-  &:hover {
-    opacity: 0.8;
-  }
 `

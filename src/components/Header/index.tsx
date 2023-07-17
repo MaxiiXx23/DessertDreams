@@ -27,7 +27,7 @@ export function Header({ colorMenus }: IHeaderProps) {
             <NavLink to="/sobre-mim">Sobre Mim</NavLink>
           </Option>
           <Option color={colorMenus}>
-            <NavLink to="#">Contato</NavLink>
+            <NavLink to="/contato">Contato</NavLink>
           </Option>
         </ListNav>
       </ContainerNav>

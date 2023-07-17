@@ -45,7 +45,6 @@ export const ContainerInfos = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 2rem;
   margin-top: 2.5rem;
 `
 
@@ -68,8 +67,9 @@ export const ContainerFooter = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-
   gap: 1rem;
+
+  margin-top: 7rem;
 
   p {
     text-align: justify;

@@ -5,6 +5,7 @@ import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { Home } from '@/pages/Home'
 import { Order } from '@/pages/Order'
 import { AboutMe } from '@/pages/AboutMe'
+import { Contact } from '@/pages/Contact'
 
 export function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/encomendas" element={<Order />} />
         <Route path="/sobre-mim" element={<AboutMe />} />
+        <Route path="/contato" element={<Contact />} />
       </Route>
     </Routes>
   )

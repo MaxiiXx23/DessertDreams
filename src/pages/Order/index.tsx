@@ -1,3 +1,4 @@
+import { IconSocialMedia } from '@/components/IconSocialMedia'
 import {
   BtnContact,
   ContainerInfo,
@@ -5,7 +6,6 @@ import {
   ContainerSection,
   ContentPresentation,
   FooterPresentation,
-  Icon,
   SubText,
   Text,
   Title,
@@ -13,11 +13,7 @@ import {
   WrapperIcons,
 } from './styles'
 
-import {
-  WhatsappLogo,
-  FacebookLogo,
-  InstagramLogo,
-} from '@phosphor-icons/react'
+import { WhatsappLogo } from '@phosphor-icons/react'
 
 export function Order() {
   return (
@@ -49,12 +45,8 @@ export function Order() {
               ou se <span>preferir:</span>
             </SubText>
             <WrapperIcons>
-              <Icon to="#">
-                <FacebookLogo size={48} />
-              </Icon>
-              <Icon to="#">
-                <InstagramLogo size={48} />
-              </Icon>
+              <IconSocialMedia to="#" icon="FacebookLogo" />
+              <IconSocialMedia to="#" icon="InstagramLogo" />
             </WrapperIcons>
           </FooterPresentation>
         </ContainerInfo>
