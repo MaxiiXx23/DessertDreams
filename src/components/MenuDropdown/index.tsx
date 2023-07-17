@@ -2,6 +2,7 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { CaretDown } from '@phosphor-icons/react'
 
 import { BtnDropdown, Content, Item, Root } from './styles'
+import { NavLink } from 'react-router-dom'
 
 type colorsMenu = 'white' | 'black'
 
@@ -20,10 +21,18 @@ export function MenuDropdown({ colorDropdown }: IMenuDropdownProps) {
 
       <DropdownMenu.Portal>
         <Content className="DropdownMenuContent" sideOffset={5}>
-          <Item color={colorDropdown}>Novidades</Item>
-          <Item color={colorDropdown}>Bolos</Item>
-          <Item color={colorDropdown}>Doces</Item>
-          <Item color={colorDropdown}>Personalizados</Item>
+          <Item color={colorDropdown}>
+            <NavLink to="/novidades">Novidades</NavLink>
+          </Item>
+          <Item color={colorDropdown}>
+            <NavLink to="/bolos">Bolos</NavLink>
+          </Item>
+          <Item color={colorDropdown}>
+            <NavLink to="/novidades">Doces</NavLink>
+          </Item>
+          <Item color={colorDropdown}>
+            <NavLink to="/novidades">Personalizados</NavLink>
+          </Item>
         </Content>
       </DropdownMenu.Portal>
     </Root>

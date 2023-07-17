@@ -37,8 +37,12 @@ export const Content = styled(DropdownMenu.Content)`
 
 export const Item = styled(DropdownMenu.Item)<IOptionProps>`
   cursor: pointer;
-  color: ${({ theme, color }) =>
-    color === 'white' ? theme.white : theme.black};
+
+  a {
+    text-decoration: none;
+    color: ${({ theme, color }) =>
+      color === 'white' ? theme.white : theme.black};
+  }
 
   &:hover {
     opacity: 0.7;
