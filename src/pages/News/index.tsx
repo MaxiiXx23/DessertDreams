@@ -17,6 +17,7 @@ export function News() {
             return (
               <CardProduct
                 key={item.id}
+                id={item.id}
                 pathImage={item.image}
                 name={item.name}
                 description={item.description}

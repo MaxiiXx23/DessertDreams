@@ -33,7 +33,7 @@ export const menuCakes: IMenuItem[] = [
     name: 'Bolo Oreo',
     description: 'Bolo com sabor chocolate e Oreo.',
     image: BoloOreo,
-    value: 54.49,
+    value: 64.79,
   },
   {
     id: '49266bfc-e200-42ad-afab-f972e2249494',
