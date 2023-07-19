@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface ICartInitialState {
-  value: number
+  amount: number
   idItems: string[]
 }
 
 const initialState: ICartInitialState = {
-  value: 0,
+  amount: 0,
   idItems: [],
 }
 
@@ -26,7 +26,7 @@ export const cartSlice = createSlice({
 
         if (!hasIdItem) {
           newState.idItems = [...newState.idItems, action.payload.id]
-          newState.value = newState.value += 1
+          newState.amount = newState.amount += 1
           return newState
         }
       },
@@ -41,7 +41,7 @@ export const cartSlice = createSlice({
       if (hasIdItem) {
         const newIdItems = state.idItems.filter((id) => id !== action.payload)
         newState.idItems = [...newIdItems]
-        newState.value = newState.value -= 1
+        newState.amount = newState.amount -= 1
         return newState
       }
     },

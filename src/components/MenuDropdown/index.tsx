@@ -21,16 +21,16 @@ export function MenuDropdown({ colorDropdown }: IMenuDropdownProps) {
 
       <DropdownMenu.Portal>
         <Content className="DropdownMenuContent" sideOffset={5}>
-          <Item color={colorDropdown}>
+          <Item>
             <NavLink to="/novidades">Novidades</NavLink>
           </Item>
-          <Item color={colorDropdown}>
+          <Item>
             <NavLink to="/bolos">Bolos</NavLink>
           </Item>
-          <Item color={colorDropdown}>
+          <Item>
             <NavLink to="/novidades">Doces</NavLink>
           </Item>
-          <Item color={colorDropdown}>
+          <Item>
             <NavLink to="/novidades">Personalizados</NavLink>
           </Item>
         </Content>

@@ -33,15 +33,20 @@ export const Content = styled(DropdownMenu.Content)`
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
+
+  background-color: ${({ theme }) => theme.white};
+
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid ${({ theme }) => theme.secondary};
 `
 
-export const Item = styled(DropdownMenu.Item)<IOptionProps>`
+export const Item = styled(DropdownMenu.Item)`
   cursor: pointer;
 
   a {
     text-decoration: none;
-    color: ${({ theme, color }) =>
-      color === 'white' ? theme.white : theme.black};
+    color: ${({ theme }) => theme.black};
   }
 
   &:hover {
