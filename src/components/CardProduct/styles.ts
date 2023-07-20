@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled.li`
@@ -54,11 +55,13 @@ export const Value = styled.span`
     font-family: ${({ theme }) => theme.fontFamily.oleoScript};
   }
 `
-export const BtnIconCart = styled.button`
+export const BtnIconCart = styled(NavLink)`
   cursor: pointer;
   background-color: ${({ theme }) => theme.white};
 
   color: ${({ theme }) => theme.primary};
+
+  text-decoration: none;
 
   padding: 0.5rem;
   display: flex;

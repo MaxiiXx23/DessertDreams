@@ -21,7 +21,9 @@ export function Header({ colorMenus }: IHeaderProps) {
         </Logo>
         <ListNav>
           <Option color={colorMenus}>
-            <Cart />
+            <NavLink to="/checkout">
+              <Cart />
+            </NavLink>
           </Option>
           <MenuDropdown colorDropdown={colorMenus} />
           <Option color={colorMenus}>

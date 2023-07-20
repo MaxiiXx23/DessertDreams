@@ -1,7 +1,3 @@
-import { useDispatch } from 'react-redux'
-
-import { addItem } from '@/shared/redux/Cart/CartReducer'
-
 import { ShoppingCart } from '@phosphor-icons/react'
 
 import {
@@ -13,8 +9,6 @@ import {
   Value,
   WrapperValue,
 } from './styles'
-// import { CartState } from '@/shared/redux/Cart/store'
-
 interface ICardProduct {
   id: string
   pathImage: string
@@ -30,8 +24,6 @@ export function CardProduct({
   description,
   value,
 }: ICardProduct) {
-  // const count = useSelector((state: CartState) => state.cart.value)
-  const dispatch = useDispatch()
   return (
     <Container>
       <img src={pathImage} alt="Imagem do produto" title={name} />
@@ -43,8 +35,7 @@ export function CardProduct({
             R$<strong>{value}</strong>
           </Value>
           <BtnIconCart
-            type="button"
-            onClick={() => dispatch(addItem(id))}
+            to={`/produto/${id}`}
             aria-label="Botão adicionar ao carrinho"
           >
             <ShoppingCart size={18} />

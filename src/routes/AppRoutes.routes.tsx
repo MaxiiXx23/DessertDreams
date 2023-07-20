@@ -11,6 +11,8 @@ import { PageNotFound } from '@/pages/PageNotFound'
 import { MenuLayout } from '@/layouts/MenuLayout'
 import { News } from '@/pages/News'
 import { MenuCakes } from '@/pages/MenuCakes'
+import { ViewProduct } from '@/pages/ViewProduct'
+import { Checkout } from '@/pages/Checkout'
 
 export function AppRoutes() {
   return (
@@ -25,6 +27,8 @@ export function AppRoutes() {
       <Route path="/" element={<MenuLayout />}>
         <Route path="novidades" element={<News />} />
         <Route path="bolos" element={<MenuCakes />} />
+        <Route path="produto/:id" element={<ViewProduct />} />
+        <Route path="checkout" element={<Checkout />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
