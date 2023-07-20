@@ -16,7 +16,7 @@ export const Count = styled.span`
   top: -0.5rem;
   right: -0.5rem;
 
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.secondary};
 
   color: ${({ theme }) => theme.white};
 

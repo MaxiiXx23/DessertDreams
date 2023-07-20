@@ -24,25 +24,36 @@ import {
 
 import { IMenuItem } from '@/shared/IMenuItem'
 import { simulateFindProduct } from '@/utils/simulateFindProduct'
-import { IFormCartProduct } from '@/shared/forms/IFormCartProduct'
 import { useDispatch } from 'react-redux'
 import { addItem } from '@/shared/redux/Cart/CartReducer'
+import { formatValue } from '@/utils/formatValue'
 
 const schema = z.object({
   id: z.string().uuid(),
   weight: z.coerce.number().default(1),
   amount: z.coerce.number().default(1),
+  value: z.number(),
 })
 
+type IFormCartProduct = z.infer<typeof schema>
+
 export function ViewProduct() {
+  const [valueProduct, setValueProduct] = useState<string>('0')
   const { id } = useParams()
-  const [item, setItem] = useState<IMenuItem>()
+  const [item, setItem] = useState<IMenuItem>({
+    id: '',
+    name: '',
+    description: '',
+    image: '',
+    value: 0,
+  })
   const dispatch = useDispatch()
 
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { isSubmitting },
   } = useForm<IFormCartProduct>({
     resolver: zodResolver(schema),
@@ -50,6 +61,7 @@ export function ViewProduct() {
       id,
       weight: 1,
       amount: 1,
+      value: 0,
     },
   })
 
@@ -63,9 +75,11 @@ export function ViewProduct() {
       const product = simulateFindProduct(id)
       if (product) {
         setItem(product)
+        setValue('value', product.value)
+        setValueProduct(formatValue(product.value))
       }
     }
-  }, [id, item])
+  }, [id, item, setValue])
   return (
     <ContainerMain>
       <ContainerSection>
@@ -98,7 +112,7 @@ export function ViewProduct() {
             </WrapperCategory>
             <Form onSubmit={handleSubmit(handleSubmitCart)}>
               <Label htmlFor="Valor">
-                Valor unidade: <h4>{item?.value}</h4>
+                Valor unidade: <h4>{valueProduct}</h4>
               </Label>
               <Label htmlFor="Peso">
                 Peso(kg):{' '}

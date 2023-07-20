@@ -17,7 +17,7 @@ export const defaultTheme = {
   black: '#000',
 
   primary: '#F87171',
-  secondary: '#F87171',
+  secondary: '#F47199',
   text: '#333333',
 
   device: {

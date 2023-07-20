@@ -65,32 +65,6 @@ export const Label = styled.label`
   justify-content: space-between;
 `
 
-interface IInput {
-  widthInput: number
-}
-
-export const Input = styled.input<IInput>`
-  width: ${({ widthInput }) => `${widthInput}%`};
-  padding: 0.5rem 1rem;
-  border: 1px solid ${({ theme }) => theme.text};
-  border-radius: 8px;
-
-  color: ${({ theme }) => theme.black};
-
-  &:not(:disabled):hover {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
-
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`
-
 export const ContainerFormPayment = styled.div`
   width: 100%;
   height: 40%;
@@ -122,6 +96,18 @@ export const List = styled.ul`
   overflow-y: auto;
 
   list-style-type: none;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.primary};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.white};
+  }
 `
 export const ItemCart = styled.li`
   width: 100%;
