@@ -80,57 +80,6 @@ export const Description = styled.p`
   animation: ${animationDescription} 3.5s ease-in-out;
 `
 
-export const Form = styled.form`
-  width: 40%;
-  height: 80%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-`
-export const Label = styled.label`
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-
-  span {
-    letter-spacing: 2px;
-    color: ${({ theme }) => theme.text};
-    font-weight: bold;
-  }
-`
-export const Input = styled.input`
-  width: 100%;
-  padding: 0.5rem 1.25rem;
-  border-bottom: 1px solid ${({ theme }) => theme.text};
-
-  &:hover {
-    border-bottom: 1px solid ${({ theme }) => theme.primary};
-  }
-
-  &:focus {
-    border-bottom: 1px solid ${({ theme }) => theme.primary};
-    padding: 1rem 1.25rem;
-    transition: 0.3s;
-  }
-`
-
-export const BtnRegister = styled.button`
-  cursor: pointer;
-  width: 80%;
-
-  padding: 1rem 1.5rem;
-
-  color: ${({ theme }) => theme.white};
-  background-color: ${({ theme }) => theme.primary};
-  opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
-`
 export const WrapperBtn = styled.div`
   width: 100%;
   display: flex;
