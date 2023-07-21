@@ -5,6 +5,7 @@ import { MenuDropdown } from '../MenuDropdown'
 import LogoSVG from '@/assets/Logo.svg'
 import { NavLink } from 'react-router-dom'
 import { Cart } from '../Cart'
+import { MenudropSign } from '../MenudropSign'
 
 type colorsMenu = 'white' | 'black'
 
@@ -20,11 +21,7 @@ export function Header({ colorMenus }: IHeaderProps) {
           <img src={LogoSVG} alt="logo" title="Logo do site" />
         </Logo>
         <ListNav>
-          <Option color={colorMenus}>
-            <NavLink to="/checkout">
-              <Cart />
-            </NavLink>
-          </Option>
+          <MenudropSign colorDropdown={colorMenus} />
           <MenuDropdown colorDropdown={colorMenus} />
           <Option color={colorMenus}>
             <NavLink to="/encomendas">Encomendas</NavLink>
