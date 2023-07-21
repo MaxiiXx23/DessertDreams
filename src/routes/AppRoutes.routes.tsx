@@ -13,14 +13,17 @@ import { News } from '@/pages/News'
 import { MenuCakes } from '@/pages/MenuCakes'
 import { ViewProduct } from '@/pages/ViewProduct'
 import { Checkout } from '@/pages/Checkout'
+
 import { SignUp } from '@/pages/SignUp'
+import { Login } from '@/pages/Login'
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
 
         <Route path="/encomendas" element={<Order />} />
         <Route path="/sobre-mim" element={<AboutMe />} />

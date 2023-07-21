@@ -5,7 +5,7 @@ export const ContainerForm = styled.form`
   height: 80%;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 `
 export const WrapperBtn = styled.div`

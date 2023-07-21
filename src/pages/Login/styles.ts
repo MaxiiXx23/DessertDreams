@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import backgroundImage from '@/assets/capcake.svg'
+import backgroundImage from '@/assets/back-cake.png'
 
 export const ContainerMain = styled.main`
   width: 100%;

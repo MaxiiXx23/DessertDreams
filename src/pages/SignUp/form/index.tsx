@@ -1,6 +1,5 @@
 import { Input } from '@/components/Input'
-import { ContainerForm } from './styles'
-import { WrapperBtn } from '../styles'
+import { ContainerForm, WrapperBtn } from './styles'
 import { BtnConfirm } from '@/components/BtnConfirm'
 import { LabelInput } from '@/components/LabelInput'
 
@@ -27,9 +26,7 @@ export function Form() {
       </LabelInput>
 
       <WrapperBtn>
-        <BtnConfirm type="submit" text="Cadastrar">
-          Cadastrar
-        </BtnConfirm>
+        <BtnConfirm type="submit" text="Cadastrar" />
       </WrapperBtn>
     </ContainerForm>
   )
