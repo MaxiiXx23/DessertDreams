@@ -14,11 +14,14 @@
 * TypeScript
 * Vite
 * Axios
+* Redux
 
 ### Bibliotecas em destaque:
 
 * Zod
 * react-hook-form
+* Redux
+* Redux-Persist
 
 ### Design
 
@@ -26,6 +29,9 @@
 <img src="https://img.shields.io/badge/Figma-f87171?style=for-the-badge&logo=figma&logoColor=white" alt="Design Figma" align="center" />
 </a>
 
+### Etapa do desenvolvimento:
+
+* Em desenvolvimento
 ### Passo-a-passo para rodar a aplicação:
 
 1. Entre na pasta DessertDreams;
